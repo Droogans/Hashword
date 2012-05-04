@@ -100,7 +100,7 @@ def sample(n):
     types = {'isupper': 0, 'islower': 0, 'isdigit': 0, 'spec': 0}
     for i in pw:
         results[pw] = types
-        if i.isdigit(): results[pw]['isdigit'] += 1
+        if i.isdigit(): results[pw]['isdigit']   += 1
         elif i.islower(): results[pw]['islower'] += 1
         elif i.isupper(): results[pw]['isupper'] += 1
         else: results[pw]['spec'] += 1
