@@ -18,6 +18,7 @@ email issues to: droogans@gmail.com
 Requirements
 ============
 Python 2.7
+
 xsel
 
 Suggested usage
