@@ -131,5 +131,11 @@ if __name__ == '__main__':
                         default=False, help='if set, use only [a-zA-Z0-9]')
     parser.add_argument('--version', action='version', version='%(prog)s 0.1',
                         help='print the module and version, then quit')
+    parser.add_argument('-c', dest='to_clipboard', action='store_true',
+                        default=False, help='set the password to the clipboard')
     args = vars(parser.parse_args())
-    clipboard(hashword(**args))
+    to_clipboard = args.pop('to_clipboard', False)
+    if to_clipboard:
+        clipboard(hashword(**args))
+    else:
+        print hashword(**args)
